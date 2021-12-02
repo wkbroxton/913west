@@ -1,0 +1,7 @@
+.dDivs {
+    justify-content: space-between;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 30vmin);
+    grid-template-rows: repeat(3, 30vmin);
+}
