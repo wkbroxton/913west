@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./AboutPage.css"
 
 export default function AboutPage() {
+  const [about, setAbout] = useState();
   return (
     <>
     <h1>About Us</h1>
@@ -11,7 +12,7 @@ export default function AboutPage() {
       <div className="qboxes"></div>
 
       <div className="qboxes"></div>
-      <div className="qboxes-mid">LOGO HERE</div>
+      <div className="qboxes-mid"></div>
       <div className="qboxes"></div>
       
       <div className="qboxes"></div>

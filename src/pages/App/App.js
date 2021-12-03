@@ -19,7 +19,7 @@ export default function App() {
             <NavBar user={user} setUser={setUser} />
             <Routes>
               {/* client-side route that renders the component instance if the path matches the url in the address bar */}
-              <Route path="/dashboard" element={<DashboardPage />} />
+              <Route path="/" element={<DashboardPage />} />
               <Route path="/intake" element={<IntakeFormPage />} />
               <Route path="/about" element={<AboutPage />} />
             </Routes>

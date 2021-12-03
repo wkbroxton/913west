@@ -15,7 +15,7 @@ export default function NavBar(props) {
     <nav>
       <Link to="/about">About Us</Link>
       &nbsp; | &nbsp;
-      <Link to="/dashboard">Dashboard</Link>
+      <Link to="/">Dashboard</Link>
       &nbsp; | &nbsp;
       <Link to="/intake">Intake Form</Link>
       &nbsp; | &nbsp;

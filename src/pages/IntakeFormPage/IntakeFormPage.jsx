@@ -25,21 +25,21 @@ export default function IntakeFormPage() {
         </div>
 
         <div className="qboxes">
-          <Step4 />
+          <Step8 />
         </div>
         <div className="qboxes"></div>
         <div className="qboxes">
-          <Step5 />
+          <Step4 />
         </div>
 
-        <div className="qboxes">
-          <Step6 />
-        </div>
         <div className="qboxes">
           <Step7 />
         </div>
         <div className="qboxes">
-          <Step8 />
+          <Step6 />
+        </div>
+        <div className="qboxes">
+          <Step5 />
         </div>
       </form>
     </>

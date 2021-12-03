@@ -7,7 +7,7 @@ export default function AuthPage({ setUser }) {
   const [showSignUp, setShowSignUp] = useState(false);
   return (
     <>
-      <video className='videoTag' autoPlay loop muted>
+      <video className='bg-aurora' autoPlay loop muted>
         <source src={bg1} type='video/mp4' />
       </video>
     <main>

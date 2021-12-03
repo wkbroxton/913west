@@ -1,13 +1,10 @@
-.viewport-header {
-    position: relative;
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(black, 0.66);
-    color: white;
-    position: relative;
-    padding: 1rem;
-  
-  }
+.bg-aurora {
+    color: #fff;
+    background: -webkit-linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('https://i.imgur.com/3gLr51W.mp4');
+    background: -o-linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('https://i.imgur.com/3gLr51W.mp4');
+    background: -moz-linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('https://i.imgur.com/3gLr51W.mp4');
+    background: linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('https://i.imgur.com/3gLr51W.mp4');
+  background-size: cover;
+  background-position: 50% 21%;
+  text-align: right;
+}
