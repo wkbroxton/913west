@@ -18,7 +18,12 @@ const userSchema = new Schema({
     trim: true,
     minLength: 3,
     required: true
-  }
+  },
+  isClient: {
+    type: Boolean,
+    default: true,
+    required: true
+  },
 }, {
   timestamps: true,
   toJSON: {
