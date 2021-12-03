@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Step1 from "../../components/Step1/Step1";
 import Step2 from "../../components/Step2/Step2";
 import Step3 from "../../components/Step3/Step3";
@@ -10,12 +10,20 @@ import Step8 from "../../components/Step8/Step8";
 import "./IntakeFormPage.css";
 
 export default function IntakeFormPage() {
+  const [formData, setFormData] = useState([]);
+  console.log(formData)
+
+  function addType(type){
+    console.log(type);
+    setFormData(...formData, type)
+  }
+
   return (
     <>
       <h1>Intake Form</h1>
       <form className="dDivs">
         <div className="qboxes">
-          <Step1 />
+          <Step1 addType={addType}/>
         </div>
         <div className="qboxes">
           <Step2 />
