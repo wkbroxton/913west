@@ -1,11 +1,11 @@
 /* CSS Custom Properties */
 :root {
-  --white: #0e0101;
-  --tan-1: #FBF9F6;
+  --white: #14080E;
+  --tan-1: #111110;
   --tan-2: #E7E2DD;
   --tan-3: #E2D9D1;
   --white: #white;
-  --orange: #F67F00;
+  --orange: #FFFFFF;
   --text-light: #968c84;
   --text-dark: #615954;
 }
@@ -79,10 +79,11 @@ code {
 }
 
 .form-container {
+  justify-self: center;
   padding: 3vmin;
   background-color: var(--tan-1);
   border: .1vmin solid var(--tan-3);
-  border-radius: 1vmin;
+  border-radius: 5vmin;
 }
 
 p.error-message {
@@ -94,7 +95,6 @@ form {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 1.25vmin;
-  color: var(--text-light);
 }
 
 label {
@@ -127,7 +127,7 @@ button, a.button {
   text-decoration: none;
   text-align: center;
   border: .1vmin solid var(--tan-2);
-  border-radius: .5vmin;
+  border-radius: 1vmin;
   outline: none;
   cursor: pointer;
 }

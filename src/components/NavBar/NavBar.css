@@ -18,3 +18,12 @@
     color: #fff;
     padding: 30px;
 }
+
+.NavBar {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.nav-right {
+    justify-items: flex-end;
+}

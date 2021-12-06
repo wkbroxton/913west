@@ -12,3 +12,11 @@ video {
   z-index: -1;
   -webkit-transform: translateZ(0);
 }
+
+.auth {
+  margin-top: 15vh;
+  display: flex;
+  justify-content: center;
+  color: #A52422;
+
+}
