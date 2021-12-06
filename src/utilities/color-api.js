@@ -1,5 +1,6 @@
-// const BASE_URL = './api/colors';
+import sendRequest from './send-request';
+const BASE_URL = './api/colors';
 
-// export function getColors() {
-//     return sendRequest(BASE_URL);
-//   }
+export function searchColors() {
+    return sendRequest(BASE_URL);
+  }

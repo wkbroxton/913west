@@ -25,9 +25,8 @@ const titles = [
 export default function IntakeFormPage() {
   const [formData, setFormData] = useState([]);
   const [step, setStep] = useState(1);
-  const [title, setTitle] = useState(1);
-  console.log(formData);
-
+  const [title, setTitle] = useState(titles[0]);
+  
   function addType(type) {
     console.log(type);
     setFormData(...formData, type);
@@ -63,7 +62,7 @@ export default function IntakeFormPage() {
         </div>
 
         <div className="qboxes">
-          {/* <Step8 /> */}
+          <Step8 />
         </div>
         <div className="qboxes">
           {/* {steps.map(function (s) {
