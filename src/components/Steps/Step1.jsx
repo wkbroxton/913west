@@ -9,7 +9,7 @@ export default function Step1({ addType }) {
 
   function handleOnClick(evt) {
     evt.preventDefault();
-    addType(step1); 
+    // addType(step1); 
     setStep1(null)
   }
 
@@ -21,7 +21,7 @@ export default function Step1({ addType }) {
 
     return (
       <>
-        <h1>Type of Project </h1>
+        <h3>Type of Project </h3>
         <select name="type" onChange={(evt) => {handleOnChange(evt.target.value)}}>
             <option value="Website/Frontend">Website/Frontend</option>
             <option value="Mobile">Mobile: (iOS/Android)</option>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Step1 from './Step1';
 
 export default function Step2({addType}) {
   const [step2, setStep2] = useState([]);

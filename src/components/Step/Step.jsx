@@ -31,49 +31,49 @@ export default function Step({ addType }) {
       <>
         {step === 1 &&
       < form>
-        <h1>{ `Step ${step}: ` } </h1>
+        <h2>{ `Step ${step}` } </h2>
         <Step1 />
         <button onClick={(evt) => handleOnClick(evt)}>Next</button>
         </form>}                   
         {step === 2 &&
       < form>
-        <h1>{ `Step ${step}: ` } </h1>
+        <h2>{ `Step ${step}` } </h2>
         <Step2 />
         <button onClick={(evt) => handleOnClick(evt)}>Next</button>
         </form>}
         {step === 3 &&
       < form>
-        <h1>{ `Step ${step}: ` } </h1>
+        <h2>{ `Step ${step}` } </h2>
         <Step3 />
         <button onClick={(evt) => handleOnClick(evt)}>Next</button>
         </form>}
         {step === 4 &&
       < form>
-        <h1>{ `Step ${step}: ` } </h1>
+        <h2>{ `Step ${step}` } </h2>
         <Step4 />
         <button onClick={(evt) => handleOnClick(evt)}>Next</button>
         </form>}
         {step === 5 &&
       < form>
-        <h1>{ `Step ${step}: ` } </h1>
+        <h2>{ `Step ${step}` } </h2>
         <Step5 />
         <button onClick={(evt) => handleOnClick(evt)}>Next</button>
         </form>}
         {step === 6 &&
       < form>
-        <h1>{ `Step ${step}: ` } </h1>
+        <h2>{ `Step ${step}` } </h2>
         <Step6 />
         <button onClick={(evt) => handleOnClick(evt)}>Next</button>
         </form>}
         {step === 7 &&
       < form>
-        <h1>{ `Step ${step}: ` } </h1>
+        <h2>{ `Step ${step}` } </h2>
         <Step7 />
         <button onClick={(evt) => handleOnClick(evt)}>Next</button>
         </form>}
         {step === 8 &&
       < form>
-        <h1>{ `Step ${step}: ` } </h1>
+        <h2>{ `Step ${step}` } </h2>
         <Step8 />
         <button onClick={(evt) => handleOnClick(evt)} >Next</button>
         </form>}
