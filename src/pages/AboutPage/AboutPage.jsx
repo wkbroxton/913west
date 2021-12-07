@@ -5,7 +5,7 @@ export default function AboutPage() {
   const [about, setAbout] = useState();
   return (
     <>
-    <h1>About Us</h1>
+    <h1 className="page-heading">About Us</h1>
     <main className="dDivs">
       <div className="qboxes"></div>
       <div className="qboxes"> </div>

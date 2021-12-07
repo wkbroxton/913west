@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from "react";
 
 export default function Step7() {
     return (
       <>
-        <h1>Step 7: Calendar</h1>
+        <h1>Calendar</h1>
       </>
     );
   }

@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 
 const SEARCH_URL ='http://colormind.io/api/';
 
-modeule.exports = {
+module.exports = {
     searchColors
 };
 

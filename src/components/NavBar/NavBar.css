@@ -23,6 +23,7 @@
     display: flex;
     justify-content: space-between;
     color: white;
+    padding: 2em;
 }
 .nav-right {
     justify-items: flex-end;

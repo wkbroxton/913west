@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ConfirmIntakeForm from "../../components/ConfirmIntakeForm/ConfirmIntakeForm";
 import Step from "../../components/Step/Step";
 import Step1 from "../../components/Steps/Step1";
 import Step2 from "../../components/Steps/Step2";
@@ -34,79 +35,45 @@ export default function IntakeFormPage() {
 
   return (
     <>
-      <h1>Intake Form</h1>
+      <h1 className="page-heading">Intake Form</h1>
       <form className="dDivs">
         <div className="qboxes">
-          <Step1 
-          addType={addType} 
-          step={step}
-          setStep={setStep}
-          title={title} 
-          setTitle={setTitle}
-          Step={Step}
-          Step1={Step1}
-          Step2={Step2}
-          Step3={Step3}
-          Step4={Step4}
-          Step5={Step5}
-          Step6={Step6}
-          Step7={Step7}
-          Step8={Step8}
-            />
+        <h1>Type of Project</h1>
         </div>
         <div className="qboxes">
-          {/* <Step2 /> */}
+        <h1>Categories</h1>
         </div>
         <div className="qboxes">
-          {/* <Step3 /> */}
+         <h1>Context for the Content</h1>
         </div>
 
         <div className="qboxes">
-          <Step8 />
+          <h1>The Design in Mind</h1>
         </div>
         <div className="qboxes">
-          {/* {steps.map(function (s) {
+          {steps.map(function (s) {
             return (
               <div
                 className="qboxes"
                 style={step !== s ? { display: "none" } : {}}
               >
-                <Step
-                  addType={addType}
-                  setStep={setStep}
-                  // setTitle={setTitle}
-                  step={step}
-                  steps={steps}
-                  // title={title}
-                  // titles={titles}
-                />
-                <Steps 
-                  Step1={Step1}
-                  Step2={Step2}
-                  Step3={Step3}
-                  Step4={Step4}
-                  Step5={Step5}
-                  Step6={Step6}
-                  Step7={Step7}
-                  Step8={Step8}
-                  setStep={setStep}
-                />
+           <Step />
               </div>
             );
-          })} */}
+          })}
         </div>
         <div className="qboxes">
-          {/* <Step4 /> */}
+        <h1>AAU Stories</h1>
         </div>
 
         <div className="qboxes">
-          {/* <Step7 /> */}
+        <h1>Calendar</h1>
         </div>
         <div className="qboxes">
-          {/* <Step6 /> */}
+        <h1>Files and Uploads</h1>
         </div>
         <div className="qboxes">
-          {/* <Step5 /> */}
+        <h1>Project References</h1>
         </div>
       </form>
       <form className="form"></form>
