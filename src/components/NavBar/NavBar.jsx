@@ -40,11 +40,16 @@ export default function NavBar(props) {
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/intake">
+              <a class="nav-link" href="/project">
                 New Project?
               </a>
             </li>
             <h3>Welcome, {props.user.name}</h3>
+            <li class="nav-item">
+              <a class="nav-link" href="/confirmation">
+                Confirmation
+              </a>
+            </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"

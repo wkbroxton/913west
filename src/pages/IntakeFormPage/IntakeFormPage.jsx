@@ -35,20 +35,20 @@ export default function IntakeFormPage() {
 
   return (
     <>
-      <h1 className="page-heading">Intake Form</h1>
+      <h1 className="page-heading">Start Your Project</h1>
       <form className="dDivs">
         <div className="qboxes">
-        <h1>Type of Project</h1>
+        {/* <h1>Type of Project</h1> */}
         </div>
         <div className="qboxes">
-        <h1>Categories</h1>
+        {/* <h1>Categories</h1> */}
         </div>
         <div className="qboxes">
-         <h1>Context for the Content</h1>
+         {/* <h1>Context for the Content</h1> */}
         </div>
 
         <div className="qboxes">
-          <h1>The Design in Mind</h1>
+          {/* <h1>The Design in Mind</h1> */}
         </div>
         <div className="qboxes">
           {steps.map(function (s) {
@@ -63,17 +63,17 @@ export default function IntakeFormPage() {
           })}
         </div>
         <div className="qboxes">
-        <h1>AAU Stories</h1>
+        {/* <h1>AAU Stories</h1> */}
         </div>
 
         <div className="qboxes">
-        <h1>Calendar</h1>
+        {/* <h1>Calendar</h1> */}
         </div>
         <div className="qboxes">
-        <h1>Files and Uploads</h1>
+        {/* <h1>Files and Uploads</h1> */}
         </div>
         <div className="qboxes">
-        <h1>Project References</h1>
+        {/* <h1>Project References</h1> */}
         </div>
       </form>
       <form className="form"></form>

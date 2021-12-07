@@ -13,6 +13,7 @@ import ConfirmIntakeForm from "../ConfirmIntakeForm/ConfirmIntakeForm";
 export default function Step({ addType }) {
   const [step, setStep] = useState(1);
   const [data, setData] = useState({});
+  // const [showNext, setShowNext] = useState(false);
 
 //   function handleOnChange(evt) {
 //     setStep1({type: evt})
@@ -20,10 +21,11 @@ export default function Step({ addType }) {
 
   function handleOnClick(evt) {
     evt.preventDefault();
+    // setShowNext(!showNext);
     if(step !== 8) {
       setStep(step +1);
     } else {
-      return {ConfirmIntakeForm};
+      return ConfirmIntakeForm;
     }
   };
 

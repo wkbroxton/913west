@@ -1,7 +1,7 @@
 const Schema = require('mongoose').Schema;
 
-const formSchema = new Schema({
-  step1: {type: Schema.Types.ObjectId, ref: 'Step1'},
+const projectSchema = new Schema({
+  type: {type: Schema.Types.ObjectId, ref: 'Step1'},
   step2: {type: Schema.Types.ObjectId, ref: 'Step2'},
   step3: {type: Schema.Types.ObjectId, ref: 'Step3'},
   step4: {type: Schema.Types.ObjectId, ref: 'Step4'},
@@ -13,4 +13,4 @@ const formSchema = new Schema({
   timestamps: true
 });
 
-module.exports = formSchema;
+module.exports = projectSchema;

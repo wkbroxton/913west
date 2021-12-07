@@ -22,13 +22,9 @@ export default function Step3({addType}) {
       <form name="type" onChange={(evt) => {handleOnChange(evt.target.value)}}>
         <h1>Context for the Content</h1>
         <div className="cat-divs">
-          <label className="left">Name:</label><input className="right" type="text" name="name" />
+          <label className="left">Project Name:</label><input className="right" type="text" name="name" />
           <label className="left">Description:</label><textarea className="right" maxLength="1000" name="description"></textarea>
-          <label className="left">Image_URL:</label><input className="right" type="text" name="image_URL" />
-          <label className="left">Address:</label><input className="right" type="text" name="address" />
           <label className="left">Website:</label><input className="right" type="text" name="link" />
-          <label className="left">Phone:</label><input className="right" type="text" name="phone" />
-          <label className="left">Email:</label><input className="right" type="text" name="email" />
         </div>
     </form>
     );
