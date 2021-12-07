@@ -20,3 +20,8 @@ video {
   color: #A52422;
 
 }
+
+.auth-label {
+  color: white;
+  size: 2vmax;
+}

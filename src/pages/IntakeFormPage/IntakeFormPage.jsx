@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ConfirmIntakeForm from "../../components/ConfirmIntakeForm/ConfirmIntakeForm";
 import Step from "../../components/Step/Step";
 import Step1 from "../../components/Steps/Step1";
@@ -23,60 +24,161 @@ const titles = [
   ["The Design in Mind"],
 ];
 
-export default function IntakeFormPage() {
-  const [formData, setFormData] = useState([]);
-  const [step, setStep] = useState(1);
-  const [title, setTitle] = useState(titles[0]);
-  
-  function addType(type) {
-    console.log(type);
-    setFormData(...formData, type);
+export default function IntakeFormPage({ handleAddProject }) {
+  const [formData, setFormData] = useState({
+    projectType: "",
+    name: "",
+    description: "",
+  });
+  const [step1, setStep1] = useState(null);
+  // const [step, setStep] = useState(1);
+  // const [title, setTitle] = useState(titles[0]);
+  const [showNext, setShowNext] = useState(false);
+  const navigate = useNavigate();
+
+  function handleOnChange(evt) {
+    const newFormData = { ...formData, [evt.target.name]: evt.target.value };
+    setFormData(newFormData);
+  }
+
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    console.log(formData);
+    handleAddProject(formData);
+    navigate('/');
   }
 
   return (
-    <>
-      <h1 className="page-heading">Start Your Project</h1>
-      <form className="dDivs">
-        <div className="qboxes">
-        {/* <h1>Type of Project</h1> */}
-        </div>
-        <div className="qboxes">
-        {/* <h1>Categories</h1> */}
-        </div>
-        <div className="qboxes">
-         {/* <h1>Context for the Content</h1> */}
-        </div>
-
-        <div className="qboxes">
-          {/* <h1>The Design in Mind</h1> */}
-        </div>
-        <div className="qboxes">
-          {steps.map(function (s) {
-            return (
-              <div
-                className="qboxes"
-                style={step !== s ? { display: "none" } : {}}
-              >
-           <Step />
-              </div>
-            );
-          })}
-        </div>
-        <div className="qboxes">
-        {/* <h1>AAU Stories</h1> */}
-        </div>
-
-        <div className="qboxes">
-        {/* <h1>Calendar</h1> */}
-        </div>
-        <div className="qboxes">
-        {/* <h1>Files and Uploads</h1> */}
-        </div>
-        <div className="qboxes">
-        {/* <h1>Project References</h1> */}
-        </div>
+    <div className="form-container-project">
+      <form onSubmit={handleSubmit}>
+        <fieldset>
+          <legend>Start Your Project</legend>
+          <div class="form-group">
+            <label for="exampleSelect1" class="form-label mt-4">
+              Type of Project
+            </label>
+            <select
+              class="form-select"
+              id="exampleSelect1"
+              name="projectType"
+              onChange={handleOnChange}
+              value={formData.projectType}
+              required
+            >
+              <option defaultValue=""></option>
+              <option value="Website/Frontend">Website/Frontend</option>
+              <option value="Mobile">Mobile: (iOS/Android)</option>
+              <option value="Database/Backend">Database/Backend</option>
+              <option value="MERN-Stack">MERN-Stack</option>
+              <option value="VR/Metaverse">VR/Metaverse</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleSelect2" class="form-label mt-4">
+              Category Tier
+            </label>
+            <select
+              multiple=""
+              class="form-select"
+              id="exampleSelect2"
+              name="tier"
+              onChange={handleOnChange}
+              value={formData.tier}
+              required
+            >
+              <option defaultValue=""></option>
+              <option value="Tier-1">
+                Tier 1: Simple Standard Build | Small Reach/User Base || No
+                ongoing maintenance
+              </option>
+              <option value="Tier-2">
+                Tier 2: Existing Site Modernization || Midsize Reach/User Base
+                || No ongoing maintenance
+              </option>
+              <option value="Tier-3">
+                Tier 3: Modern MERN-STACK Build || Large Reach/User Base ||
+                Scheduled ongoing maintenance
+              </option>
+            </select>
+          </div>
+          <div class="form-group" name="type">
+            <label for="exampleSelect2" class="form-label mt-4">
+              Context for the Content
+            </label>
+            <label class="col-form-label mt-4" for="inputDefault"></label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Project Name"
+              id="inputDefault"
+              name="name"
+              onChange={handleOnChange}
+              value={formData.name}
+              required
+            />
+            <label class="col-form-label mt-4" for="inputDefault">
+              Description
+            </label>
+            <textarea
+              type="text"
+              class="form-control"
+              id="exampleTextarea"
+              rows="3"
+              placeholder="Description"
+              id="inputDefault"
+              name="description"
+              onChange={handleOnChange}
+              value={formData.description}
+              required
+            />
+          </div>
+          <div
+            class="form-group"
+            name="type"
+          >
+            <label for="exampleSelect2" class="form-label mt-4">
+              Project Reference Links
+            </label>
+            <label class="col-form-label mt-4" for="inputDefault"></label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="URL Reference"
+              id="inputDefault"
+              name="link1"
+              onChange={handleOnChange}
+              value={formData.link1}
+            />
+            <label class="col-form-label mt-4" for="inputDefault"></label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="URL Reference"
+              id="inputDefault"
+              name="link2"
+              onChange={handleOnChange}
+              value={formData.link2}
+            />
+            <label class="col-form-label mt-4" for="inputDefault"></label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="URL Reference"
+              id="inputDefault"
+              name="link3"
+              onChange={handleOnChange}
+              value={formData.link3}
+            />
+          </div>
+          <button
+            type="submit"
+            class="btn btn-dark"
+          >
+            Submit
+          </button>
+        </fieldset>
       </form>
-      <form className="form"></form>
-    </>
+    </div>
   );
 }
+

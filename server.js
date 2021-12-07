@@ -22,12 +22,12 @@ app.use(require('./config/checkToken'));
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
-app.use('/api/colors', require('./routes/api/colors'));
+app.use('/api/projects', require('./routes/api/projects'));
 
 // Protect the api routes below from anonymous users
 const ensureLoggedIn = require('./config/ensureLoggedIn');
 app.use('/api/users', ensureLoggedIn, require('./routes/api/users'));
-app.use('/api/colors', ensureLoggedIn, require('./routes/api/colors'));
+app.use('/api/projects', ensureLoggedIn, require('./routes/api/projects'));
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests

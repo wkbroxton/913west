@@ -1,12 +1,12 @@
 const fetch = require('node-fetch');
 
-const SEARCH_URL ='http://colormind.io/api/';
+const SEARCH_URL ='https://api.goog.io/';
 
 module.exports = {
-    searchColors
+    searchGoogle
 };
 
-async function searchColors(req, res) {
+async function searchGoogle(req, res) {
     await fetch(`${SEARCH_URL}`)
     .then(res => {
         if(res.ok) return res,json()

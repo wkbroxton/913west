@@ -14,11 +14,15 @@ import * as projectsAPI from '../../utilities/projects-api';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
-  const [addProjects, setAddProjects] = useState([]);
+  const [projects, setProjects] = useState([]);
+  const [isClient, setIsClient] = useState(true);
 
-  async function addProject(post) {
-    const newProject = await projectsAPI.create(post);
-    setAddProjects(newProject);
+  //Add useEffect to load this user's Projects
+
+
+  async function handleAddProject(projectData) {
+    const newProject = await projectsAPI.create(projectData);
+    setProjects([newProject, ...projects]);
     console.log("Please Be a Project", newProject);
   } 
 
@@ -31,10 +35,10 @@ export default function App() {
             <Routes>
               {/* client-side route that renders the component instance if the path matches the url in the address bar */}
               <Route path="/" element={<DashboardPage />} />
-              <Route path="/project" element={<IntakeFormPage addProject={addProject}/>} />
+              <Route path="/project/create" element={<IntakeFormPage handleAddProject={handleAddProject}/>} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/founders" element={<FoundersPage />} />
-              <Route path="/confirmation" element={<ConfirmationFormPage addProject={addProject}/>} />
+              <Route path="/confirmation" element={<ConfirmationFormPage handleAddProject={handleAddProject}/>} />
             </Routes>
           </>
         ) : (

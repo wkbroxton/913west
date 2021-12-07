@@ -1,0 +1,9 @@
+.form-container-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn btn-dark{
+    color: black;
+}

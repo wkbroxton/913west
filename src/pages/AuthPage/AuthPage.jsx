@@ -15,6 +15,7 @@ export default function AuthPage({ setUser }) {
           </video>
           <h1>Welcome</h1>
             <h2>Please Sign In</h2>
+            <br />
           <button onClick={() => setShowSignUp(!showSignUp)}>
             {showSignUp ? "Log In" : "Sign Up"}
           </button>

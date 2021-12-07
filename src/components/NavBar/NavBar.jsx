@@ -40,7 +40,7 @@ export default function NavBar(props) {
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/project">
+              <a class="nav-link" href="/project/create">
                 New Project?
               </a>
             </li>

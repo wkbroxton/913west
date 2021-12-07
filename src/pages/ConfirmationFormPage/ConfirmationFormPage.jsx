@@ -58,14 +58,6 @@ export default function ConfirmIntakeForm( {addStep} ) {
             <label class="col-form-label mt-4" for="inputDefault"></label>
             <input type="text" class="form-control" placeholder="URL Reference" id="inputDefault" onChange={(evt) => {handleOnChange(evt.target.value)}} required/>
         </div>
-        <div class="form-group">
-          <label for="exampleTextarea" class="form-label mt-4">Example textarea</label>
-          <textarea class="form-control" id="exampleTextarea" rows="3" onChange={(evt) => {handleOnChange(evt.target.value)}} required></textarea>
-        </div>
-        <div class="form-group">
-          <label for="formFile" class="form-label mt-4">Default file input example</label>
-          <input class="form-control" type="file" id="formFile" onChange={(evt) => {handleOnChange(evt.target.value)}} required/>
-        </div>
         <button type="submit" class="btn btn-primary"type="submit" 
       onClick={handleSubmit}>Submit</button>
       </fieldset>
