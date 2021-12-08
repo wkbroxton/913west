@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./AboutPage.css"
 
 export default function AboutPage() {
-  const [about, setAbout] = useState();
+
   return (
     <>
     <h1 className="page-heading">About Us</h1>

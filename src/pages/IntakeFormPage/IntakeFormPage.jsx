@@ -1,28 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import ConfirmIntakeForm from "../../components/ConfirmIntakeForm/ConfirmIntakeForm";
-import Step from "../../components/Step/Step";
-import Step1 from "../../components/Steps/Step1";
-import Step2 from "../../components/Steps/Step2";
-import Step3 from "../../components/Steps/Step3";
-import Step4 from "../../components/Steps/Step4";
-import Step5 from "../../components/Steps/Step5";
-import Step6 from "../../components/Steps/Step6";
-import Step7 from "../../components/Steps/Step7";
-import Step8 from "../../components/Steps/Step8";
 import "./IntakeFormPage.css";
-
-const steps = [1, 2, 3, 4, 5, 6, 7, 8];
-const titles = [
-  ["Type of Project"],
-  ["Category Level"],
-  ["Context for the Content"],
-  ["AAU Stories"],
-  ["Project References"],
-  ["Files & Uploads"],
-  ["Time Table"],
-  ["The Design in Mind"],
-];
 
 export default function IntakeFormPage({ handleAddProject }) {
   const [formData, setFormData] = useState({
@@ -31,8 +9,6 @@ export default function IntakeFormPage({ handleAddProject }) {
     description: "",
   });
   const [step1, setStep1] = useState(null);
-  // const [step, setStep] = useState(1);
-  // const [title, setTitle] = useState(titles[0]);
   const [showNext, setShowNext] = useState(false);
   const navigate = useNavigate();
 

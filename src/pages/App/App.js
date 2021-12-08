@@ -16,9 +16,6 @@ export default function App() {
   const [projects, setProjects] = useState([]);
   const [isClient, setIsClient] = useState(true);
 
-  //Add useEffect to load this user's Projects
-
-
   async function handleAddProject(projectData) {
     const newProject = await projectsAPI.create(projectData);
     setProjects([newProject, ...projects]);
