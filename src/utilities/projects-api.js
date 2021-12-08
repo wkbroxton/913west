@@ -7,5 +7,10 @@ export function create(project) {
 }
 
 export function getAll() {
-    return sendRequest(`${BASE_URL}`);
-  }
+    return sendRequest(`${BASE_URL}/dashboard`);
+}
+
+export function findOneAndDelete(id) {
+    console.log('Did you see her?!?', id);
+    return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
+}

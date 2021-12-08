@@ -12,7 +12,7 @@ export default function NavBar(props) {
   return (
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="/dashboard">
           Dashboard
         </a>
         <button
@@ -40,17 +40,12 @@ export default function NavBar(props) {
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/project/create">
+              <a class="nav-link" href="/">
                 New Project?
               </a>
             </li>
-            <h3>Welcome, {props.user.name}</h3>
-            <li class="nav-item">
-              <a class="nav-link" href="/confirmation">
-                Confirmation
-              </a>
-            </li>
-            <li class="nav-item dropdown">
+            <h3>Welcome, {props.user.name}</h3>      
+            <li className="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 data-bs-toggle="dropdown"
@@ -62,10 +57,10 @@ export default function NavBar(props) {
                 Explore
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="/">
+                <a class="dropdown-item" href="/dashboard">
                   Dashboard
                 </a>
-                <a class="dropdown-item" href="/intake">
+                <a class="dropdown-item" href="/">
                   New Project
                 </a>
                 <a class="dropdown-item" href="/about">

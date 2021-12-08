@@ -5,7 +5,6 @@ import { getUser } from "../../utilities/users-service";
 import AuthPage from "../AuthPage/AuthPage";
 import DashboardPage from "../DashboardPage/DashboardPage";
 import IntakeFormPage from "../IntakeFormPage/IntakeFormPage";
-import ConfirmationFormPage from "../ConfirmationFormPage/ConfirmationFormPage";
 import NavBar from "../../components/NavBar/NavBar";
 import bg1 from "./bg1.mp4";
 import AboutPage from "../AboutPage/AboutPage";
@@ -29,16 +28,15 @@ export default function App() {
   return (
     <div style={{ backgroundImage: `url(${bg1})` }}>
       <main className="App">
-        {user ? (
+        {user && isClient ? (
           <>
             <NavBar user={user} setUser={setUser} />
             <Routes>
               {/* client-side route that renders the component instance if the path matches the url in the address bar */}
-              <Route path="/" element={<DashboardPage />} />
-              <Route path="/project/create" element={<IntakeFormPage handleAddProject={handleAddProject}/>} />
+              <Route path="/dashboard" element={<DashboardPage />} />
+              <Route path="/" element={<IntakeFormPage handleAddProject={handleAddProject}/>} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/founders" element={<FoundersPage />} />
-              <Route path="/confirmation" element={<ConfirmationFormPage handleAddProject={handleAddProject}/>} />
             </Routes>
           </>
         ) : (

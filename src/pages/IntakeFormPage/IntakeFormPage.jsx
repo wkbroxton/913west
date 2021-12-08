@@ -45,7 +45,7 @@ export default function IntakeFormPage({ handleAddProject }) {
     evt.preventDefault();
     console.log(formData);
     handleAddProject(formData);
-    navigate('/');
+    navigate('/dashboard');
   }
 
   return (
