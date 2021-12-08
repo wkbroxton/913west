@@ -14,24 +14,32 @@ import * as projectsAPI from '../../utilities/projects-api';
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [projects, setProjects] = useState([]);
+  const [showForm, setShowForm] = useState(null);
   const [isClient, setIsClient] = useState(true);
 
   async function handleAddProject(projectData) {
     const newProject = await projectsAPI.create(projectData);
     setProjects([newProject, ...projects]);
     console.log("Please Be a Project", newProject);
-  } 
+  }
+
+  async function editProject(project) {
+    const newProject = await projectsAPI.updateProject(project);
+    console.log("You'll never change");
+    const updatedProjects = projects.map(p => p._id === newProject._id ? newProject : p);
+    setProjects(updatedProjects);
+  }
 
   return (
     <div style={{ backgroundImage: `url(${bg1})` }}>
       <main className="App">
-        {user && isClient ? (
+        {user ? (
           <>
             <NavBar user={user} setUser={setUser} />
             <Routes>
               {/* client-side route that renders the component instance if the path matches the url in the address bar */}
-              <Route path="/dashboard" element={<DashboardPage />} />
-              <Route path="/" element={<IntakeFormPage handleAddProject={handleAddProject}/>} />
+              <Route path="/dashboard" element={<DashboardPage showForm={showForm} setShowForm={setShowForm} editProject={editProject}/>} />
+              <Route path="/" element={<IntakeFormPage handleAddProject={handleAddProject} showForm={showForm} setShowForm={setShowForm} editProject={editProject}/>} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/founders" element={<FoundersPage />} />
             </Routes>

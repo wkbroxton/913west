@@ -28,3 +28,12 @@
 .nav-right {
     justify-items: flex-end;
 }
+
+h3 {
+    margin-top: .25em;
+    display: flex;
+    align-self: center;
+    color: white;
+    padding-left: 2em;
+    padding-right: 2em;
+}

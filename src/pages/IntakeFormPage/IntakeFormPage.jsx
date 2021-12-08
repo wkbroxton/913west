@@ -21,18 +21,19 @@ export default function IntakeFormPage({ handleAddProject, showForm, setShowForm
     evt.preventDefault();
     console.log(formData);
     if(showForm){
-      editProject(formData)
+      editProject(formData);
+      setShowForm(null);
     } else {
       handleAddProject(formData);
+      navigate("/Dashboard")
     }
-    setShowForm(null);
   }
 
   return (
     <div className="form-container-project">
       <form onSubmit={handleSubmit}>
         <fieldset>
-          <legend>Start Your Project</legend>
+          <legend>{showForm ? "Edit" : "Start"} Your Project</legend>
           <div class="form-group">
             <label for="exampleSelect1" class="form-label mt-4">
               Type of Project

@@ -2,13 +2,9 @@ import React, { useEffect, useState } from "react";
 import * as ProjectAPI from "../../utilities/projects-api";
 import IntakeFormPage from "../IntakeFormPage/IntakeFormPage";
 
-export default function ProjectDetailPage() {
+export default function DashboardPage({showForm, setShowForm, editProject}) {
   const [projects, setProjects] = useState([]);
-  const [showForm, setShowForm] = useState(null);
 
-  // useEffect(function () {
-  //   (async () => setProjects(await getAll(projects)))();
-  // }, []);
   useEffect(function () {
     async function getAllProjects() {
       const project = await ProjectAPI.getAll();
@@ -22,13 +18,6 @@ export default function ProjectDetailPage() {
     const newProject = await ProjectAPI.findOneAndDelete(id);
     console.log("Say Nite-Nite");
     setProjects(newProject);
-  }
-
-  async function editProject(project) {
-    const newProject = await ProjectAPI.updateProject(project);
-    console.log("You'll never change");
-    const updatedProjects = projects.map(p => p._id === newProject._id ? newProject : p);
-    setProjects(updatedProjects);
   }
 
   function handleUpdate(project) {
