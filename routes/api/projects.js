@@ -9,4 +9,6 @@ router.get('/dashboard', projectsCtrl.getAll);
 
 router.delete('/:id', projectsCtrl.findOneAndDelete);
 
+router.put('/:id', projectsCtrl.updateProject);
+
 module.exports = router;

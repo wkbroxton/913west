@@ -4,7 +4,8 @@ const Project = require('../../models/project');
 module.exports = {
     create,
     getAll,
-    findOneAndDelete
+    findOneAndDelete,
+    updateProject
 };
 
 async function getAll(req, res) {
@@ -24,4 +25,10 @@ async function findOneAndDelete(req, res) {
     console.log("controller");
     const projects = await Project.find({});
     res.json(projects);
+}
+
+async function updateProject(req, res) {
+    const project = await Project.findByIdAndUpdate(req.params.id, req.body, {new: true});
+    console.log("edits on edits");
+    res.json(project);
 }

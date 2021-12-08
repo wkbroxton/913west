@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./IntakeFormPage.css";
 
-export default function IntakeFormPage({ handleAddProject }) {
-  const [formData, setFormData] = useState({
+export default function IntakeFormPage({ handleAddProject, showForm, setShowForm, editProject }) {
+  const [formData, setFormData] = useState(showForm ? showForm : {
     projectType: "",
     name: "",
     description: "",
   });
-  const [step1, setStep1] = useState(null);
-  const [showNext, setShowNext] = useState(false);
+
   const navigate = useNavigate();
 
   function handleOnChange(evt) {
@@ -18,10 +17,15 @@ export default function IntakeFormPage({ handleAddProject }) {
   }
 
   function handleSubmit(evt) {
+    console.log("Hitting")
     evt.preventDefault();
     console.log(formData);
-    handleAddProject(formData);
-    navigate('/dashboard');
+    if(showForm){
+      editProject(formData)
+    } else {
+      handleAddProject(formData);
+    }
+    setShowForm(null);
   }
 
   return (
@@ -98,7 +102,6 @@ export default function IntakeFormPage({ handleAddProject }) {
             <textarea
               type="text"
               class="form-control"
-              id="exampleTextarea"
               rows="3"
               placeholder="Description"
               id="inputDefault"

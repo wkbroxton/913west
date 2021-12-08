@@ -14,3 +14,8 @@ export function findOneAndDelete(id) {
     console.log('Did you see her?!?', id);
     return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
 }
+
+export function updateProject(project) {
+    console.log('Changes', project);
+    return sendRequest(`${BASE_URL}/${project._id}`, 'PUT', project);
+}
