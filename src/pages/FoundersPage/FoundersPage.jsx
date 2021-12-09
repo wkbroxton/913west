@@ -7,7 +7,7 @@ export default function FoundersPage() {
       <h1 className="page-heading">Founder's Page</h1>
       <p>From the Beginning</p>
     <div className="founders">
-      <div className="row row-cols-1 row-cols-md-3 g-4">
+      <div className="row row-cols-1 row-cols-md-4 g-5">
         <div className="col">
           <div className="card h-100">
             <img src="https://i.imgur.com/m66Y6N8.jpg" className="card-img-top" alt="Adam" />
@@ -22,7 +22,7 @@ export default function FoundersPage() {
             <img src="https://i.imgur.com/j5bL8PO.jpg" className="card-img-top" alt="Chi aka 'Eagle-Eye'" />
             <div className="card-body">
               <h5 className="card-title">Chijioke Okorie</h5>
-              <p className="card-text">A programmer who's skill is only surpased by his empathy for people and team. An eagle eye for debugging.</p>
+              <p className="card-text">A programmer whose skill is only surpased by his empathy for people and team. An eagle eye for debugging.</p>
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@ export default function FoundersPage() {
             <img src="https://i.imgur.com/P5MHcVL.jpg" className="card-img-top" alt="" />
             <div className="card-body">
               <h5 className="card-title">Jonathan Pena-Loa</h5>
-              <p className="card-text">Brings others into the programming process by serving as teacher and guide and makes ever programming session better.</p>
+              <p className="card-text">Brings others into the programming process by serving as teacher and guide and makes ever paired programming session better.</p>
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@ export default function FoundersPage() {
             <img src="https://i.imgur.com/cqb3aie.jpg" className="card-img-top" alt="Rip" />
             <div className="card-body">
               <h5 className="card-title">Ripley Mayfield</h5>
-              <p className="card-text">Brilliant coder, Front-End Wizard with a knack for problem-solving and debugging. Overall cheat code.</p>
+              <p className="card-text">Brilliant coder, Front and Backend Wizard with a knack for problem-solving and debugging. An overall cheat code.</p>
             </div>
           </div>
         </div>

@@ -31,3 +31,4 @@ export default function AuthPage({ setUser }) {
     </div>
   );
 }
+

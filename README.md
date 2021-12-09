@@ -21,26 +21,40 @@ Here is the link to my Trello Board for planning:
 
 ## Technologies Used: 
 
-    ExpressJS, NodeJS
-    
+    MERN-STACK APPLICATION:
+
     MongoDB, MongooseJavaScript
     
-    CSS, Bootstrap
-
-    LucidChart for my ERD
+    ExpressJS, React, NodeJS
+    
+    CSS, Bootstrap, LucidChart
 
 <br>
 
 
   ### SHOUT OUTS: 
-   >[CSS Tricks](https://css-tricks.com/write-code-get-confetti/)
    
-   Jim Clark & Stephanie  for the constant guidance and encouragement to aim high in the planning and implementation of projects.
+   Jim Clark & Stephanie Lee for the constant guidance and encouragement to aim high in the planning and implementation of projects.
 
-   The amazing cohort of SEI 913w that inspired this projectestJonathan Pena-Loa for being a consistent trouble shooting partner.
-   Mohamed
+   Chris Olgilvy for setting a great foundation for us before taking on his new cohort.
 
-   My wife Samantha for making sure I eat and holding down the fort during this cohort.<br><br>
+   The amazing cohort of SEI 913w that inspired this project by being some of the dopest developers on the planet and even better humans:
+   
+            Adam Millar
+            Chijioke Okorie
+            Ian Cannon
+            Jesus Pineda
+            Jonathan Pena-Loa
+            Mohamed Diop
+            Paolo Ang
+            Rajkamal Singh
+            Ripley Mayfield
+            Octavia Selim
+            Xinyi Li
+
+
+
+   As always, my wife Samantha for getting me through this, and all of life's project, with her love and support.<br><br>
 
 ## Getting Started: 
 
@@ -57,8 +71,8 @@ Here is the link to deploy the web application:
 * AAU, I like to click specific categories of businesses to explore.
 * AAU, I'd like to show the progression of reviews, if modifications are made.
 * AAV, I'd like to have categories for each business want to see the types of businesses available to see if any meet my needs.
-* AAU, I'd like to be able to see and search business by category.
-* Display an informatonal key for specifics on Business Categories.
+* Incorporate Additional Functionality for Admin users.
+* Build Out Entranet Backend System for Admin Users.
 
 In the Future, we see additional opportunities:
 * Businesses can claim and own their page.

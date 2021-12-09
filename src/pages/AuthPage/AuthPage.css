@@ -23,12 +23,13 @@ video {
 
 .auth-label {
   color: white;
-  size: 5em;
+  size: 15em;
 }
 
 .auth-title-back {
   background-color: white;
   padding: 5em;
+  border-radius: 35%;
 }
 
 .button {
@@ -37,4 +38,11 @@ video {
 
 .dash-h3 {
   color: black;
+}
+
+.home-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }

@@ -39,10 +39,10 @@ export default function App() {
             <NavBar user={user} setUser={setUser} />
             <Routes>
               {/* client-side route that renders the component instance if the path matches the url in the address bar */}
-              <Route path="/dashboard" element={<DashboardPage user={user} isAdmin={isAdmin} showForm={showForm} setShowForm={setShowForm} editProject={editProject}/>} />
+              <Route path="/dashboard" element={<DashboardPage user={user} isAdmin={isAdmin} setIsAdmin={setIsAdmin} showForm={showForm} setShowForm={setShowForm} editProject={editProject}/>} />
               <Route path="/" element={<IntakeFormPage user={user} handleAddProject={handleAddProject} showForm={showForm} setShowForm={setShowForm} editProject={editProject}/>} />
               <Route path="/about" element={<AboutPage />} />
-              <Route path="/founders" element={<FoundersPage user={user} isAdmin={isAdmin}/>} />
+              <Route path="/founders" element={<FoundersPage user={user} isAdmin={isAdmin} setIsAdmin={setIsAdmin}/>} />
             </Routes>
           </>
         ) : (
