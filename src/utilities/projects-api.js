@@ -11,7 +11,6 @@ export function getAll() {
 }
 
 export function findOneAndDelete(id) {
-    console.log('Did you see her?!?', id);
     return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
 }
 

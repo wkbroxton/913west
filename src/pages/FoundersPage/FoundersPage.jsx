@@ -4,8 +4,11 @@ export default function FoundersPage() {
   return (
     <>
     <br />
-      <h1 className="page-heading">Founder's Page</h1>
+      <h1 className="page-heading">The Founder's</h1>
       <p>From the Beginning</p>
+      <h3>
+      
+      </h3>
     <div className="founders">
       <div className="row row-cols-1 row-cols-md-4 g-5">
         <div className="col">

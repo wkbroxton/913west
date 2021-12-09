@@ -23,11 +23,6 @@ export default function NavBar(props) {
             <span className="visually-hidden">(current)</span>
           </a>
             </li>
-            {/* <li className="nav-item">
-              <a className="nav-link" href="/about">
-                About Us
-              </a>
-            </li> */}
             <li className="nav-item">
               <a className="nav-link" href="/">
                 New Project
@@ -43,21 +38,11 @@ export default function NavBar(props) {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Explore
+                Who We Are
               </a>
               <div className="dropdown-menu">
-                <a className="dropdown-item" href="/dashboard">
-                  Dashboard
-                </a>
-                <a className="dropdown-item" href="/">
-                  New Project
-                </a>
-                <a className="dropdown-item" href="/about">
-                  About Us
-                </a>
-                <div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/founders">
-                  Founders
+                  The Founder's
                 </a>
               </div>
             </li>

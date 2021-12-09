@@ -30,15 +30,17 @@ export default function AboutPage() {
     >
       <div class="section-left" xyz="fade left stagger">
         <div class="section-item xyz-nested">We're Not Done</div>
-        <div class="section-item xyz-nested">Do Something</div>
+        <div class="section-item xyz-nested"><input className="about-logo" type="image" src="https://i.imgur.com/1G69hDy.png" /></div>
         <div class="section-item xyz-nested">Do Something</div>
       </div>
       <div
         class="section-right xyz-nested"
         xyz="fade big delay-10"
-      >WAIT</div>
+      >
+        <input className="home-logo" type="image" src="https://i.imgur.com/1G69hDy.png" /></div>
     </div>
     <div class="page-footer" xyz="fade bottom ease-in-out delay-10">
+      
       <div
         class="footer-logo xyz-nested"
         xyz="fade left ease-in-out delay-10"

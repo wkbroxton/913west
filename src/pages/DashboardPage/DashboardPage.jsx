@@ -5,12 +5,9 @@ import IntakeFormPage from "../IntakeFormPage/IntakeFormPage";
 export default function DashboardPage({user, showForm, setShowForm, editProject}) {
   const [projects, setProjects] = useState([]);
 
-  console.log(projects);
-
   useEffect(function () {
     async function getAllProjects() {
       const project = await ProjectAPI.getAll();
-      console.log("What's in Here", project);
       setProjects(project);
     }
     getAllProjects();
@@ -18,7 +15,6 @@ export default function DashboardPage({user, showForm, setShowForm, editProject}
 
   async function deleteProject(id) {
     const newProject = await ProjectAPI.findOneAndDelete(id);
-    console.log("Say Nite-Nite");
     setProjects(newProject);
   }
 

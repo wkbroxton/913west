@@ -14,7 +14,6 @@ async function getAll(req, res) {
 }
 
 async function create(req, res) {
-    console.log(req.body);
     const project = await Project({...req.body, user: req.user._id});
     project.save();
     res.json(project);
@@ -22,13 +21,11 @@ async function create(req, res) {
 
 async function findOneAndDelete(req, res) {
     await Project.findByIdAndDelete(req.params.id);
-    console.log("controller");
     const projects = await Project.find({});
     res.json(projects);
 }
 
 async function updateProject(req, res) {
     const project = await Project.findByIdAndUpdate(req.params.id, req.body, {new: true});
-    console.log("edits on edits");
     res.json(project);
 }
