@@ -6,9 +6,14 @@ import "./IntakeFormPage.css";
 export default function IntakeFormPage({ handleAddProject, showForm, setShowForm, editProject }) {
   const [value, onChange] = useState(new Date());
   const [formData, setFormData] = useState(showForm ? showForm : {
+    user: "",
     projectType: "",
     name: "",
     description: "",
+    link1: "",
+    link2: "",
+    link3: "",
+    dueDate: "",
   });
 
   const navigate = useNavigate();
@@ -21,7 +26,6 @@ export default function IntakeFormPage({ handleAddProject, showForm, setShowForm
   function handleSubmit(evt) {
     console.log("Hitting")
     evt.preventDefault();
-    console.log(formData);
     if(showForm){
       editProject(formData);
       setShowForm(null);
@@ -50,8 +54,9 @@ export default function IntakeFormPage({ handleAddProject, showForm, setShowForm
             >
               <option defaultValue=""></option>
               <option value="Website/Frontend">Website/Frontend</option>
-              <option value="Mobile">Mobile: (iOS/Android)</option>
+              <option value="Mobile">Mobile App: (iOS/Android)</option>
               <option value="Database/Backend">Database/Backend</option>
+              <option value="Full-stack">Full-Stack/Frontend and Backend</option>
               <option value="MERN-Stack">MERN-Stack</option>
               <option value="VR/Metaverse">VR/Metaverse</option>
             </select>
@@ -84,10 +89,13 @@ export default function IntakeFormPage({ handleAddProject, showForm, setShowForm
               </option>
             </select>
           </div>
+          <br />
           <div className="form-group" name="type">
-          <label className="col-form-label mt-4" for="inputDefault">
+          <h6 className="col-form-label mt-4" for="inputDefault">
               Context for the Content
-            </label>
+            </h6>
+            <br />
+            <h6>Project Name</h6>
             <label className="col-form-label mt-4" for="inputDefault"></label>
             <input
               type="text"
@@ -157,7 +165,6 @@ export default function IntakeFormPage({ handleAddProject, showForm, setShowForm
                 onChange={onChange}
                 value={value}
                 name="dueDate"
-                // onChange={handleOnChange}
               />
             </div>
           <button

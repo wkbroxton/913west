@@ -19,15 +19,15 @@ export default function NavBar(props) {
     <div className="collapse navbar-collapse" id="navbarColor01">
       <ul className="navbar-nav me-auto">
         <li className="nav-item">
-          <a className="nav-link active" href="#">Home
+          <a className="nav-link active" href="/dashboard">Home
             <span className="visually-hidden">(current)</span>
           </a>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a className="nav-link" href="/about">
                 About Us
               </a>
-            </li>
+            </li> */}
             <li className="nav-item">
               <a className="nav-link" href="/">
                 New Project
@@ -38,7 +38,7 @@ export default function NavBar(props) {
               <a
                 className="nav-link dropdown-toggle"
                 data-bs-toggle="dropdown"
-                href="#"
+                href="/founders"
                 role="button"
                 aria-haspopup="true"
                 aria-expanded="false"
