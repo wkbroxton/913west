@@ -6,7 +6,7 @@ const User = require('./models/user');
 await User.create([{ 
     name: 'Admin', 
     email: 'william.k.broxton@gmail.com', 
-    isClient: false, 
+    isAdmin: false, 
     password: 'B123B321',
 }]);
   process.exit();

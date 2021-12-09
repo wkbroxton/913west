@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import DatePicker from 'react-date-picker';
 import "./IntakeFormPage.css";
 
 export default function IntakeFormPage({ handleAddProject, showForm, setShowForm, editProject }) {
+  const [value, onChange] = useState(new Date());
   const [formData, setFormData] = useState(showForm ? showForm : {
     projectType: "",
     name: "",
@@ -33,14 +35,14 @@ export default function IntakeFormPage({ handleAddProject, showForm, setShowForm
     <div className="form-container-project">
       <form onSubmit={handleSubmit}>
         <fieldset>
-          <legend>{showForm ? "Edit" : "Start"} Your Project</legend>
-          <div class="form-group">
-            <label for="exampleSelect1" class="form-label mt-4">
+          <legend className="intake-legend">{showForm ? "Edit" : "Start"} Your Project</legend>
+          <div className="form-group">
+          <label className="col-form-label mt-4" for="inputDefault">
               Type of Project
             </label>
             <select
-              class="form-select"
-              id="exampleSelect1"
+              className="form-select"
+              id="inputDefault"
               name="projectType"
               onChange={handleOnChange}
               value={formData.projectType}
@@ -54,14 +56,14 @@ export default function IntakeFormPage({ handleAddProject, showForm, setShowForm
               <option value="VR/Metaverse">VR/Metaverse</option>
             </select>
           </div>
-          <div class="form-group">
-            <label for="exampleSelect2" class="form-label mt-4">
+          <div className="form-group">
+          <label className="col-form-label mt-4" for="inputDefault">
               Category Tier
             </label>
             <select
               multiple=""
-              class="form-select"
-              id="exampleSelect2"
+              className="form-select"
+              id="inputDefault"
               name="tier"
               onChange={handleOnChange}
               value={formData.tier}
@@ -82,14 +84,14 @@ export default function IntakeFormPage({ handleAddProject, showForm, setShowForm
               </option>
             </select>
           </div>
-          <div class="form-group" name="type">
-            <label for="exampleSelect2" class="form-label mt-4">
+          <div className="form-group" name="type">
+          <label className="col-form-label mt-4" for="inputDefault">
               Context for the Content
             </label>
-            <label class="col-form-label mt-4" for="inputDefault"></label>
+            <label className="col-form-label mt-4" for="inputDefault"></label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               placeholder="Project Name"
               id="inputDefault"
               name="name"
@@ -97,12 +99,12 @@ export default function IntakeFormPage({ handleAddProject, showForm, setShowForm
               value={formData.name}
               required
             />
-            <label class="col-form-label mt-4" for="inputDefault">
+            <label className="col-form-label mt-4" for="inputDefault">
               Description
             </label>
             <textarea
               type="text"
-              class="form-control"
+              className="form-control"
               rows="3"
               placeholder="Description"
               id="inputDefault"
@@ -113,36 +115,33 @@ export default function IntakeFormPage({ handleAddProject, showForm, setShowForm
             />
           </div>
           <div
-            class="form-group"
+            className="form-group"
             name="type"
           >
-            <label for="exampleSelect2" class="form-label mt-4">
-              Project Reference Links
-            </label>
-            <label class="col-form-label mt-4" for="inputDefault"></label>
+            <label className="col-form-label mt-4" for="inputDefault"> Project Reference Links</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               placeholder="URL Reference"
               id="inputDefault"
               name="link1"
               onChange={handleOnChange}
               value={formData.link1}
             />
-            <label class="col-form-label mt-4" for="inputDefault"></label>
+            <label className="col-form-label mt-4" for="inputDefault">Second Reference (Optional)</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               placeholder="URL Reference"
               id="inputDefault"
               name="link2"
               onChange={handleOnChange}
               value={formData.link2}
             />
-            <label class="col-form-label mt-4" for="inputDefault"></label>
+            <label className="col-form-label mt-4" for="inputDefault">Third Reference (Optional)</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               placeholder="URL Reference"
               id="inputDefault"
               name="link3"
@@ -150,9 +149,20 @@ export default function IntakeFormPage({ handleAddProject, showForm, setShowForm
               value={formData.link3}
             />
           </div>
+          <label for="exampleSelect2" className="form-label mt-4">
+              Due Date
+            </label>
+            <div>
+              <DatePicker
+                onChange={onChange}
+                value={value}
+                name="dueDate"
+                // onChange={handleOnChange}
+              />
+            </div>
           <button
             type="submit"
-            class="btn btn-dark"
+            className="btn btn-dark"
           >
             Submit
           </button>

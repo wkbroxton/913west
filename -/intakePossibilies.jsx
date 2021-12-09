@@ -53,12 +53,12 @@
 //       <form onSubmit={handleSubmit}>
 //         <fieldset>
 //           <legend>Start Your Project</legend>
-//           <div class="form-group">
-//             <label for="exampleSelect1" class="form-label mt-4">
+//           <div className="form-group">
+//             <label for="exampleSelect1" className="form-label mt-4">
 //               Type of Project
 //             </label>
 //             <select
-//               class="form-select"
+//               className="form-select"
 //               id="exampleSelect1"
 //               name="projectType"
 //               onChange={handleOnChange}
@@ -73,13 +73,13 @@
 //               <option value="VR/Metaverse">VR/Metaverse</option>
 //             </select>
 //           </div>
-//           <div class="form-group">
-//             <label for="exampleSelect2" class="form-label mt-4">
+//           <div className="form-group">
+//             <label for="exampleSelect2" className="form-label mt-4">
 //               Category Tier
 //             </label>
 //             <select
 //               multiple=""
-//               class="form-select"
+//               className="form-select"
 //               id="exampleSelect2"
 //               name="tier"
 //               onChange={handleOnChange}
@@ -101,14 +101,14 @@
 //               </option>
 //             </select>
 //           </div>
-//           <div class="form-group" name="type">
-//             <label for="exampleSelect2" class="form-label mt-4">
+//           <div className="form-group" name="type">
+//             <label for="exampleSelect2" className="form-label mt-4">
 //               Context for the Content
 //             </label>
-//             <label class="col-form-label mt-4" for="inputDefault"></label>
+//             <label className="col-form-label mt-4" for="inputDefault"></label>
 //             <input
 //               type="text"
-//               class="form-control"
+//               className="form-control"
 //               placeholder="Project Name"
 //               id="inputDefault"
 //               name="name"
@@ -116,12 +116,12 @@
 //               value={formData.name}
 //               required
 //             />
-//             <label class="col-form-label mt-4" for="inputDefault">
+//             <label className="col-form-label mt-4" for="inputDefault">
 //               Description
 //             </label>
 //             <textarea
 //               type="text"
-//               class="form-control"
+//               className="form-control"
 //               id="exampleTextarea"
 //               rows="3"
 //               placeholder="Description"
@@ -133,36 +133,36 @@
 //             />
 //           </div>
 //           <div
-//             class="form-group"
+//             className="form-group"
 //             name="type"
 //           >
-//             <label for="exampleSelect2" class="form-label mt-4">
+//             <label for="exampleSelect2" className="form-label mt-4">
 //               Project Reference Links
 //             </label>
-//             <label class="col-form-label mt-4" for="inputDefault"></label>
+//             <label className="col-form-label mt-4" for="inputDefault"></label>
 //             <input
 //               type="text"
-//               class="form-control"
+//               className="form-control"
 //               placeholder="URL Reference"
 //               id="inputDefault"
 //               name="link1"
 //               onChange={handleOnChange}
 //               value={formData.link1}
 //             />
-//             <label class="col-form-label mt-4" for="inputDefault"></label>
+//             <label className="col-form-label mt-4" for="inputDefault"></label>
 //             <input
 //               type="text"
-//               class="form-control"
+//               className="form-control"
 //               placeholder="URL Reference"
 //               id="inputDefault"
 //               name="link2"
 //               onChange={handleOnChange}
 //               value={formData.link2}
 //             />
-//             <label class="col-form-label mt-4" for="inputDefault"></label>
+//             <label className="col-form-label mt-4" for="inputDefault"></label>
 //             <input
 //               type="text"
-//               class="form-control"
+//               className="form-control"
 //               placeholder="URL Reference"
 //               id="inputDefault"
 //               name="link3"
@@ -172,7 +172,7 @@
 //           </div>
 //           <button
 //             type="submit"
-//             class="btn btn-dark"
+//             className="btn btn-dark"
 //           >
 //             Submit
 //           </button>
@@ -236,12 +236,12 @@
 //       <form onSubmit={handleSubmit}>
 //         <fieldset>
 //           <legend>Start Your Project</legend>
-//           <div class="form-group">
-//             <label for="exampleSelect1" class="form-label mt-4">
+//           <div className="form-group">
+//             <label for="exampleSelect1" className="form-label mt-4">
 //               Type of Project
 //             </label>
 //             <select
-//               class="form-select"
+//               className="form-select"
 //               id="exampleSelect1"
 //               name="projectType"
 //               onChange={handleOnChange}
@@ -256,13 +256,13 @@
 //               <option value="VR/Metaverse">VR/Metaverse</option>
 //             </select>
 //           </div>
-//           <div class="form-group">
-//             <label for="exampleSelect2" class="form-label mt-4">
+//           <div className="form-group">
+//             <label for="exampleSelect2" className="form-label mt-4">
 //               Category Tier
 //             </label>
 //             <select
 //               multiple=""
-//               class="form-select"
+//               className="form-select"
 //               id="exampleSelect2"
 //               name="tier"
 //               onChange={handleOnChange}
@@ -284,14 +284,14 @@
 //               </option>
 //             </select>
 //           </div>
-//           <div class="form-group" name="type">
-//             <label for="exampleSelect2" class="form-label mt-4">
+//           <div className="form-group" name="type">
+//             <label for="exampleSelect2" className="form-label mt-4">
 //               Context for the Content
 //             </label>
-//             <label class="col-form-label mt-4" for="inputDefault"></label>
+//             <label className="col-form-label mt-4" for="inputDefault"></label>
 //             <input
 //               type="text"
-//               class="form-control"
+//               className="form-control"
 //               placeholder="Project Name"
 //               id="inputDefault"
 //               name="name"
@@ -299,12 +299,12 @@
 //               value={formData.name}
 //               required
 //             />
-//             <label class="col-form-label mt-4" for="inputDefault">
+//             <label className="col-form-label mt-4" for="inputDefault">
 //               Description
 //             </label>
 //             <textarea
 //               type="text"
-//               class="form-control"
+//               className="form-control"
 //               id="exampleTextarea"
 //               rows="3"
 //               placeholder="Description"
@@ -316,36 +316,36 @@
 //             />
 //           </div>
 //           <div
-//             class="form-group"
+//             className="form-group"
 //             name="type"
 //           >
-//             <label for="exampleSelect2" class="form-label mt-4">
+//             <label for="exampleSelect2" className="form-label mt-4">
 //               Project Reference Links
 //             </label>
-//             <label class="col-form-label mt-4" for="inputDefault"></label>
+//             <label className="col-form-label mt-4" for="inputDefault"></label>
 //             <input
 //               type="text"
-//               class="form-control"
+//               className="form-control"
 //               placeholder="URL Reference"
 //               id="inputDefault"
 //               name="link1"
 //               onChange={handleOnChange}
 //               value={formData.link1}
 //             />
-//             <label class="col-form-label mt-4" for="inputDefault"></label>
+//             <label className="col-form-label mt-4" for="inputDefault"></label>
 //             <input
 //               type="text"
-//               class="form-control"
+//               className="form-control"
 //               placeholder="URL Reference"
 //               id="inputDefault"
 //               name="link2"
 //               onChange={handleOnChange}
 //               value={formData.link2}
 //             />
-//             <label class="col-form-label mt-4" for="inputDefault"></label>
+//             <label className="col-form-label mt-4" for="inputDefault"></label>
 //             <input
 //               type="text"
-//               class="form-control"
+//               className="form-control"
 //               placeholder="URL Reference"
 //               id="inputDefault"
 //               name="link3"
@@ -355,7 +355,7 @@
 //           </div>
 //           <button
 //             type="submit"
-//             class="btn btn-dark"
+//             className="btn btn-dark"
 //           >
 //             Submit
 //           </button>

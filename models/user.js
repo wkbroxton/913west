@@ -19,9 +19,9 @@ const userSchema = new Schema({
     minLength: 3,
     required: true
   },
-  isClient: {
+  isAdmin: {
     type: Boolean,
-    default: true,
+    default: false,
     required: true
   },
 }, {

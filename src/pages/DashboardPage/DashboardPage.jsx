@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import * as ProjectAPI from "../../utilities/projects-api";
 import IntakeFormPage from "../IntakeFormPage/IntakeFormPage";
 
-export default function DashboardPage({showForm, setShowForm, editProject}) {
+export default function DashboardPage({user, showForm, setShowForm, editProject}) {
   const [projects, setProjects] = useState([]);
+
+  console.log(projects);
 
   useEffect(function () {
     async function getAllProjects() {
@@ -27,33 +29,34 @@ export default function DashboardPage({showForm, setShowForm, editProject}) {
   return (
     <>
       {showForm ? <IntakeFormPage showForm={showForm} editProject={editProject} setShowForm={setShowForm}/> :
-      <div>
+      <div style={{display: "flex", flexDirection: "column", alignContent: "center", width: "100%", justifyContent: "center"}}>
         <br />
-        <h1>DashboardPage</h1>
+        <h1>{user.name}'s</h1>
+        <h3 className="dash-h3">Submitted Projects</h3>
         <br />
         <br />
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div className="row row-cols-1 row-cols-md-3 g-4" style={{display: "flex",  alignSelf: "center", alignContent: "center", width: "100%", justifyContent: "center"}}>
           {projects.map((p) => (
-            <div class="col">
+            <div className="col" style={{display: "flex", width: "450px", flexDirection: "column", alignContent: "center", justifyContent: "center"}}>
               <div
-                class="card text-white bg-dark mb-3"
-                style={{ maxWidth: "30rem", maxHeight: "100vh" }}
+                className="card text-white bg-dark mb-3"
+                style={{display: "flex", flexDirection: "column", alignContent: "center", height: "100%", width: "100%", justifyContent: "center"}}
               >
-                <div class="card-header"></div>
-                <div class="card-body">
-                  <h4 class="card-title">{p.name}</h4>
-                  <p class="card-text">{p.description}</p>
-                  <p class="card-text">{p.projectType}</p>
-                  <p class="card-text">{p.tier}</p>
-                  <p class="card-text">{p.link1}</p>
-                  <p class="card-text">{p.link2}</p>
-                  <p class="card-text">{p.link3}</p>
+                <div className="card-header"></div>
+                <div className="card-body">
+                  <h4 className="card-title">{p.name}</h4>
+                  <p className="card-text">{p.description}</p>
+                  <p className="card-text">{p.projectType}</p>
+                  <p className="card-text">{p.tier}</p>
+                  <p className="card-text">{p.link1}</p>
+                  <p className="card-text">{p.link2}</p>
+                  <p className="card-text">{p.link3}</p>
                 </div>
-                <button class="btn btn-outline-light" onClick={()=> handleUpdate(p)} type="button">
+                <button className="btn btn-outline-light" onClick={()=> handleUpdate(p)} type="button">
                   EDIT
                 </button>
                 <button
-                  class="btn btn-outline-light"
+                  className="btn btn-outline-light"
                   onClick={() => deleteProject(p._id)}
                   type="button"
                 >

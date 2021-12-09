@@ -15,8 +15,9 @@ export default function App() {
   const [user, setUser] = useState(getUser());
   const [projects, setProjects] = useState([]);
   const [showForm, setShowForm] = useState(null);
-  const [isClient, setIsClient] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(true);
 
+  
   async function handleAddProject(projectData) {
     const newProject = await projectsAPI.create(projectData);
     setProjects([newProject, ...projects]);
@@ -38,10 +39,10 @@ export default function App() {
             <NavBar user={user} setUser={setUser} />
             <Routes>
               {/* client-side route that renders the component instance if the path matches the url in the address bar */}
-              <Route path="/dashboard" element={<DashboardPage showForm={showForm} setShowForm={setShowForm} editProject={editProject}/>} />
-              <Route path="/" element={<IntakeFormPage handleAddProject={handleAddProject} showForm={showForm} setShowForm={setShowForm} editProject={editProject}/>} />
+              <Route path="/dashboard" element={<DashboardPage user={user} showForm={showForm} setShowForm={setShowForm} editProject={editProject}/>} />
+              <Route path="/" element={<IntakeFormPage user={user} handleAddProject={handleAddProject} showForm={showForm} setShowForm={setShowForm} editProject={editProject}/>} />
               <Route path="/about" element={<AboutPage />} />
-              <Route path="/founders" element={<FoundersPage />} />
+              <Route path="/founders" element={<FoundersPage user={user}/>} />
             </Routes>
           </>
         ) : (

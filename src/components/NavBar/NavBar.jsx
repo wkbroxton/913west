@@ -9,34 +9,34 @@ export default function NavBar(props) {
   }
 
   return (
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">913 WEST</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+<nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="#">913 WEST</a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Home
-            <span class="visually-hidden">(current)</span>
+    <div className="collapse navbar-collapse" id="navbarColor01">
+      <ul className="navbar-nav me-auto">
+        <li className="nav-item">
+          <a className="nav-link active" href="#">Home
+            <span className="visually-hidden">(current)</span>
           </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about">
+            <li className="nav-item">
+              <a className="nav-link" href="/about">
                 About Us
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">
+            <li className="nav-item">
+              <a className="nav-link" href="/">
                 New Project
               </a>
             </li>
             <h3>Welcome, {props.user.name}</h3>      
             <li className="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle"
                 data-bs-toggle="dropdown"
                 href="#"
                 role="button"
@@ -45,26 +45,26 @@ export default function NavBar(props) {
               >
                 Explore
               </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="/dashboard">
+              <div className="dropdown-menu">
+                <a className="dropdown-item" href="/dashboard">
                   Dashboard
                 </a>
-                <a class="dropdown-item" href="/">
+                <a className="dropdown-item" href="/">
                   New Project
                 </a>
-                <a class="dropdown-item" href="/about">
+                <a className="dropdown-item" href="/about">
                   About Us
                 </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/founders">
+                <div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/founders">
                   Founders
                 </a>
               </div>
             </li>
           </ul>
-          <div class="d-flex">
+          <div className="d-flex">
             <button
-              class="btn btn-secondary my-2 my-sm-0"
+              className="btn btn-secondary my-2 my-sm-0"
               href=""
               onClick={handleLogOut}
             >
