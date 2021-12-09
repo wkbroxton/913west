@@ -9,13 +9,13 @@ module.exports = {
 };
 
 async function getAll(req, res) {
-    const projects = await Project.find({});
+    const projects = await Project.find({user: req.user._id });
     res.json(projects);
 }
 
 async function create(req, res) {
     console.log(req.body);
-    const project = await Project({...req.body, user: req.user});
+    const project = await Project({...req.body, user: req.user._id});
     project.save();
     res.json(project);
 }

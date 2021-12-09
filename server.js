@@ -20,13 +20,9 @@ app.use(express.static(path.join(__dirname, 'build')));
 // Check if token and create req.user
 app.use(require('./config/checkToken'));
 
-// Put API routes here, before the "catch all" route
-app.use('/api/users', require('./routes/api/users'));
-app.use('/api/projects', require('./routes/api/projects'));
-
 // Protect the api routes below from anonymous users
 const ensureLoggedIn = require('./config/ensureLoggedIn');
-app.use('/api/users', ensureLoggedIn, require('./routes/api/users'));
+app.use('/api/users', require('./routes/api/users'));
 app.use('/api/projects', ensureLoggedIn, require('./routes/api/projects'));
 
 // The following "catch all" route (note the *) is necessary
