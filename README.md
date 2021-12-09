@@ -12,8 +12,7 @@ Allow NINE13WEST to service your software developing needs.
 <img src='https://i.imgur.com/qT8AGcZ.png'>
 <img src='https://i.imgur.com/rKRanWB.png'>
 <img src='https://i.imgur.com/BXEapuL.png'>
-<img src='https://i.imgur.com/dg2372F.png'>
-<img src='https://i.imgur.com/4IgJJf8.png'>
+<img src='https://i.imgur.com/UaE63ll.png'>
 
 <br><br>
 
