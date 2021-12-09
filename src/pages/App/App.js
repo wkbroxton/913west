@@ -12,6 +12,7 @@ import * as projectsAPI from '../../utilities/projects-api';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
+  const [isAdmin, setIsAdmin] = useState(false);
   const [projects, setProjects] = useState([]);
   const [showForm, setShowForm] = useState(null);
 
@@ -34,9 +35,9 @@ export default function App() {
           <>
             <NavBar user={user} setUser={setUser} />
             <Routes>
-              <Route path="/dashboard" element={<DashboardPage user={user} showForm={showForm} setShowForm={setShowForm} editProject={editProject}/>} />
-              <Route path="/" element={<IntakeFormPage user={user} handleAddProject={handleAddProject} showForm={showForm} setShowForm={setShowForm} editProject={editProject}/>} />
-              <Route path="/founders" element={<FoundersPage user={user} />} />
+              <Route path="/dashboard" element={<DashboardPage user={user} isAdmin={isAdmin} showForm={showForm} setShowForm={setShowForm} editProject={editProject}/>} />
+              <Route path="/" element={<IntakeFormPage user={user} isAdmin={isAdmin} handleAddProject={handleAddProject} showForm={showForm} setShowForm={setShowForm} editProject={editProject}/>} />
+              <Route path="/founders" element={<FoundersPage user={user} isAdmin={isAdmin}/>} />
             </Routes>
           </>
         ) : (
