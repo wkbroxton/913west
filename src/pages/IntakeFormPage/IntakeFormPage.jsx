@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import DatePicker from 'react-date-picker';
 import "./IntakeFormPage.css";
 
 export default function IntakeFormPage({ handleAddProject, showForm, setShowForm, editProject }) {
-  const [value, onChange] = useState(new Date());
   const [formData, setFormData] = useState(showForm ? showForm : {
-    user: "",
     projectType: "",
     name: "",
     description: "",
@@ -157,16 +154,6 @@ export default function IntakeFormPage({ handleAddProject, showForm, setShowForm
               value={formData.link3}
             />
           </div>
-          <label for="exampleSelect2" className="form-label mt-4">
-              Due Date
-            </label>
-            <div>
-              <DatePicker
-                onChange={onChange}
-                value={value}
-                name="dueDate"
-              />
-            </div>
           <button
             type="submit"
             className="btn btn-dark"
