@@ -19,7 +19,6 @@ export default function App() {
   
   async function handleAddProject(projectData) {
     const newProject = await projectsAPI.create(projectData);
-    console.log("Please Be a Project", newProject);
   }
 
   async function editProject(project) {
