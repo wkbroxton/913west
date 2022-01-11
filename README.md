@@ -26,7 +26,7 @@ Here is the link to my Trello Board for planning:
 
     MERN-STACK APPLICATION:
 
-    MongoDB, MongooseJavaScript
+    MongoDB, Mongoose, JavaScript
     
     ExpressJS, React, NodeJS
     
@@ -80,4 +80,3 @@ In the Future:
 * Incorporate Additional Functionality for Admin users.
 * We'll build out and Admin portal to service request.
 * Automated Reply of project confirmation receipt and followup appointment scheduled within 24 business hours.
-* Premium marketing add on services.
